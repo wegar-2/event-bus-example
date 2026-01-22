@@ -1,5 +1,3 @@
-import asyncio
-
 from event_bus_example.event_bus import EventBus
 from event_bus_example.publisher import StockPricePublisher, StockPriceConfig
 from event_bus_example.event import PriceTickEvent

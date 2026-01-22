@@ -5,3 +5,5 @@ of the pattern.
 
 Event bus implemented withoug using *asyncio*. 
 
+For a look at publisher-subscriber pattern - cf. the subpackages
+*publisher* and *subscriber*.
