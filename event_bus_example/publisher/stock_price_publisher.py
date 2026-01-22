@@ -7,14 +7,14 @@ from typing import Final
 import numpy as np
 
 from event_bus_example.common import SECONDS_PER_DAY
-from event_bus_example.event import PriceTick
+from event_bus_example.event import PriceTickEvent
 from event_bus_example.event_bus.event_bus import EventBus
-from event_bus_example.publisher.stock_price_config import StockPriceConfig
+from event_bus_example.publisher.config import StockPriceConfig
 
 logger = logging.getLogger(__name__)
 
 
-class StockPriceFeed:
+class StockPricePublisher:
 
     _PUBLISH_FREQ_IN_SECS: Final[int] = 3
 
@@ -42,7 +42,7 @@ class StockPriceFeed:
             )
 
             logger.info(f"New price update available...")
-            self._bus.publish(event=PriceTick(
+            self._bus.publish(event=PriceTickEvent(
                 ticker=self._config.ticker,
                 price=price,
                 timestamp=datetime.now()

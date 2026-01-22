@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from event_bus_example.common import DATETIME_FORMAT
 
 
-class PriceTick(BaseModel):
+class PriceTickEvent(BaseModel):
     ticker: str
     price: float
     timestamp: datetime

@@ -1,1 +1,1 @@
-from .price_tick import PriceTick
+from .price_tick_event import PriceTickEvent
